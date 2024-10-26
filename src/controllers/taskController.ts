@@ -26,7 +26,7 @@ const taskController = (app: Application) => {
     response.status(task ? 201 : 400).send(task ?? "Invalid Task data.");
   });
 
-  app.put("/Tasks/:id", async (request, response) => {
+  app.put("/tasks/:id", async (request, response) => {
     const id = request.params.id;
     const task = await updateTask(request.body, id);
     response.status(task ? 200 : 404).send(task ?? "Task not found.");
