@@ -35,6 +35,15 @@ app.post("/users", async (request, response) => {
     response.status(user ? 201 : 400).send(user ?? "Invalid user data.");
 });
 ```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "email": "string",
+    "role": "string",
+}
+```
 <br>
 
 #### PUT /users/:id
@@ -45,6 +54,15 @@ app.put("/users/:id", async (request, response) => {
     const user = await updateUser(request.body, id);
     response.status(user ? 200 : 404).send(user ?? "User not found.");
 });
+```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "email": "string",
+    "role": "string",
+}
 ```
 <br>
 
@@ -98,6 +116,15 @@ app.post("/projects", async (request, response) => {
       .send(project ?? "Invalid project data.");
 });
 ```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "description": "string",
+    "managerId": "string",
+}
+```
 <br>
 
 #### PUT /projects/:id
@@ -108,6 +135,15 @@ app.put("/projects/:id", async (request, response) => {
     const project = await updateProject(request.body, id);
     response.status(project ? 200 : 404).send(project ?? "Project not found.");
 });
+```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "description": "string",
+    "managerId": "string",
+}
 ```
 <br>
 
@@ -161,6 +197,17 @@ app.post("/tasks", async (request, response) => {
     response.status(task ? 201 : 400).send(task ?? "Invalid Task data.");
 });
 ```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "description": "string",
+    "priority": "string",
+    "projectId": "string",
+    "assigneeId": "string"
+}
+```
 <br>
 
 #### PUT /tasks/:id
@@ -171,6 +218,17 @@ app.put("/tasks/:id", async (request, response) => {
     const task = await updateTask(request.body, id);
     response.status(task ? 200 : 404).send(task ?? "Task not found.");
 });
+```
+
+#### Corpo da requisição
+```
+{
+    "name": "string",
+    "description": "string",
+    "priority": "string",
+    "projectId": "string",
+    "assigneeId": "string"
+}
 ```
 <br>
 
