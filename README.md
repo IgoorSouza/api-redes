@@ -1,5 +1,6 @@
 # Sobre o projeto
 > Status: Finalizado ✔️
+> Link da API pública: https://api-redes-fxya.onrender.com
 ## Funcionalidades de CRUD
 
 ### userController
