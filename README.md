@@ -1,5 +1,5 @@
 # Sobre o projeto
-> Status: Finalizado ✔️
+> Status: Finalizado ✔️ <br>
 > Link da API pública: https://api-redes-fxya.onrender.com
 ## Funcionalidades de CRUD
 
